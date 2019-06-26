@@ -1,0 +1,22 @@
+
+JS CLASS PROGRAMMING QUESTIONS
+1.javascript function that returns a passed string with letters in alphabetical order
+link-
+https://jsfiddle.net/nishiag58/2vmuLxb9/34/
+
+2.write a js function that accepts a string as a parameter and find the longest word within the string.
+links-
+https://jsfiddle.net/nishiag58/2vmuLxb9/48/
+
+3.write the js program to get the current date.
+links-
+https://jsfiddle.net/nishiag58/2vmuLxb9/60/
+
+4.write a program to find which 1st january is being a sunday between 2000 and 2050
+https://jsfiddle.net/nishiag58/2vmuLxb9/70/
+
+5.write a javascript program to calculate days left untill next christmas.
+https://jsfiddle.net/nishiag58/2vmuLxb9/72/
+
+6.write a javascript program to remove a character at the specified position of a given string and return the new string.
+https://jsfiddle.net/nishiag58/2vmuLxb9/78/
