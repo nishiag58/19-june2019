@@ -1,0 +1,13 @@
+1.Write a JavaScript program to display the current day and time in the following format.Sample Output : Today is : Tuesday. Current time is : 10 PM : 30 : 38
+https://jsfiddle.net/nishiag58/qn6bo4u0/2/
+2.Write a JavaScript program to determine whether a given year is a leap year in the Gregorian calendar.
+https://jsfiddle.net/nishiag58/a7hjkcuq/9/
+
+3.Write a JavaScript program where the program takes a random integer between 1 to 10, the user is then prompted to input a guess number. If the user input matches with guess number, the program will display a message "Good Work" otherwise display a message "Not matched".
+https://jsfiddle.net/nishiag58/qkohzw9L/5/
+
+4.Write a JavaScript program to calculate days left until next Christmas.
+https://jsfiddle.net/nishiag58/qkohzw9L/
+
+5.Write a JavaScript program to capitalize the first letter of each word of a given string
+https://jsfiddle.net/nishiag58/a7hjkcuq/3/
