@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BOX COLORING</title>
+	<style>
+   div
+	 {
+  width: 300px;
+  border: 5px solid green;
+  padding: 50px;
+  margin: 20px;
+}
+button{
+	width: 50px;
+    border: 5px solid black;
+    margin: 10px;
+}
+</style>
+
+</head>
+<body>
+<input type="text" name="" id="colorvalue">
+<button onclick="changeColor()">click here</button>
+<br><br>
+<div id="box"></div>
+<div id="box1" onclick="function()"></div>
+
+<script>
+function changeColor()
+{
+	let inputValue =document.getElementById("colorvalue").value;
+let divbox =document.getElementById("box");
+let divbox1 =document.getElementById("box1");
+divbox.style.background=inputValue;
+divbox.addEventListener("click",function()
+{
+	divbox1.style.background=inputValue;
+
+}
+)
+
+}</script>
+</body>
+</html>
