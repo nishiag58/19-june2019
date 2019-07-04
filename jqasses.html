@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>JQUERY ASSIGNMENT</title>
+<style>
+#filter{
+   border:none;
+}
+#data-table
+{
+       width: 100%;
+       margin: 20px 0;
+       border-collapse: collapse;
+       border: 1px solid #cdcdcd;
+       padding: 5px;
+       text-align: left;
+}
+
+th, td {
+  text-align: center;
+  padding: 16px;
+}
+
+tr:nth-child(even) {
+  background-color: #b3ffec
+}
+body{
+  background-color: #ffffe6
+
+}
+</style>
+
+<script src="https://code.jquery.com/jquery-1.12.4.min.js">
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script>
+  //sort by marks
+      function sortMarks() 
+              {
+                 var table=$('#data-table');
+                 var tbody =$('#tbody');
+
+                tbody.find('tr').sort(function(a, b) 
+                       {
+                          if($('#age_order').val()=='asc') 
+                            {
+                               return $('td:nth-child(3)', a).text().localeCompare($('td:nth-child(3)', b).text());
+                            }
+                           else 
+                            {
+                                return $(' td:nth-child(3)', b).text().localeCompare($(' td:nth-child(3)', a).text());
+                            }
+    
+              }).appendTo(tbody);
+  
+                 var sort_order=$('#age_order').val();
+                 if(sort_order=="asc")
+                      {
+                          document.getElementById("age_order").value="asc";
+                      }
+            }
+
+            function sortName()
+          {
+              var table=$('#data-table');
+              var tbody =$('#tbody');
+
+              tbody.find('tr').sort(function(a, b) 
+                   {
+                      if($('#name_order').val()=='asc') 
+                            {
+                                return $('td:first', a).text().localeCompare($('td:first', b).text());
+                             }
+                       else 
+                            {
+                                  return $('td:first', b).text().localeCompare($('td:first', a).text());
+                            }
+    
+                    }).appendTo(tbody);
+  
+               var sort_order=$('#name_order').val();
+                 if(sort_order=="asc")
+                  {
+                      document.getElementById("name_order").value="asc";
+                  }
+          }
+
+  //count total no of rows
+
+      $(function() {
+        $('.insert-student').bind('click', function() {
+           var count = $('#tbody tr').length;
+          $('#totalrec').html(count);
+          });
+       
+     });
+         
+
+
+//inserting a value into table
+$(document).ready(function(){
+       $(".insert-student").click(function(){
+           var name = $("#name").val();
+           var subject = $("#subject").val();
+           var marks=$("#marks").val();
+           var markup = "<tr><td>" + name + "</td><td>" + subject + "</td><td>" + marks + "</td><td><input type='button' value='Delete' class='remove'></td></tr>";
+           $("table tbody").append(markup);
+       });
+   
+
+  $(document).on('click', '.remove', function() {
+        $(this).parents('tr').remove();
+    });
+
+  $(document).on('click', '.butremove', function() {
+        $(this).parents('tr').remove();
+    });
+
+  });
+</script>
+
+</head>
+
+<body>
+           
+   <table id="data-table" border="1">
+       <thead>
+           <tr>
+               <th>Student Name</th>
+               <th >Subject </th>
+               <th >Marks Obtained</th>
+               <th></th>
+           </tr>
+       </thead>
+       <tbody id="tbody">
+           <tr>
+               <td>Nishi agarwal</td>
+               <td>C</td>
+               <td>85.00</td>
+               <td><button class="butremove">Delete</button></td>
+           </tr>
+           <tr>
+             <td>Nikita saxena</td>
+             <td>c++</td>
+             <td>84.00</td>
+             <td><button class="butremove">Delete</button></td>
+           </tr>
+       </tbody>
+   </table>
+    <input type="hidden" id="name_order" value="asc">
+    <input type="hidden" id="age_order" value="asc">
+   <button type="button" onclick="sortName()">Sort by Name</button>
+   <br>
+   
+   <button type="button" onclick="sortMarks()">Sort by Marks</button>
+
+   <p>Total Records:<span id="totalrec"></span></p>
+   <p>Insert Student</p><br>
+   <label>Student Name:-</label>
+   <input type="text" name="textbox" id="name"><br>
+   <label>Student Subject:- </label>
+   <input type="text" name="textbox" id="subject"><br>
+   <label>Marks Obtained:-</label>
+   <input type="text" name="textbox" id="marks"><br>
+   <button class="insert-student">Add Record</button>
+   
+</body>
+</html>
+
