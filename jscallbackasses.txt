@@ -1,0 +1,16 @@
+JS CALLBACK PROMISE ASSIGNMENT
+
+1. radio button color change code
+https://jsfiddle.net/nishiag58/ugzdwemn/
+
+2.Use promise to prompt alert after 2 seconds 
+https://jsfiddle.net/nishiag58/6o5eyg9m/4/
+
+3.binding promise callbacks
+https://jsfiddle.net/nishiag58/bmpuehf0/4/
+
+4.Show error if result is returning false
+https://jsfiddle.net/nishiag58/wy5xaubf/3/
+
+5.Do multiple task if error came or result returned false
+https://jsfiddle.net/nishiag58/t5xy6pbe/
