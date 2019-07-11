@@ -1,0 +1,2 @@
+class assesment for threeJs guided by rohit sir
+https://jsfiddle.net/nishiag58/hLceaq7f/
